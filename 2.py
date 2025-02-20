@@ -1,10 +1,11 @@
 import math
 
-def gcd(a, b):
-    return math.gcd(a, b)  # Using built-in function
+def volume_sphere():
+    num = float(input("Enter the value of radius: "))
+    result = (4/3) * math.pi * num**3
+    return result
 
-# Example usage
-num1 = int(input("Enter first number: "))
-num2 = int(input("Enter second number: "))
+# Calling the function and printing the result
+print(f"Volume of the given sphere is: {volume_sphere()}")
 
-print(f"GCD of {num1} and {num2} is {gcd(num1, num2)}")
+

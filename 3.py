@@ -1,4 +1,9 @@
+import math
 
-c = float(input("Enter temprature in celcius : "))
-far = ( c * 9/5 ) + 32
-print(far)
+def area_circle():
+    radius = int(input("Enter radius: "))
+    area = math.pi * radius ** 2
+    return area
+
+# Calling the function and printing the result
+print("Area of the circle:", area_circle())
