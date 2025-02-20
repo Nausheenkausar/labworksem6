@@ -1,21 +1,10 @@
-def is_perfect_number(n):
-    """Function to check if a number is a perfect number."""
-    if n < 2:
-        return False  
-    
-    divisor_sum = 0  # Initialize the sum of divisors
+def reverse_string(s):
+    """Reverses the given string."""
+    return s[::-1]  # Slices the string in reverse order
 
-    for i in range(1, n // 2 + 1):  # Loop through potential divisors
-        if n % i == 0:  # If 'i' is a divisor of 'n'
-            divisor_sum += i  # Add it to the sum
+# Taking input from the user
+user_input = input("Enter a string: ")
 
-    # A perfect number is equal to the sum of its proper divisors
-    return divisor_sum == n  
-
-# Example usage
-num = int(input("Enter a number: "))
-
-if is_perfect_number(num):
-    print(f"{num} is a perfect number.")
-else:
-    print(f"{num} is not a perfect number.")
+# Reversing the string and displaying the result
+reversed_str = reverse_string(user_input)
+print("Reversed string:", reversed_str)

@@ -1,17 +1,12 @@
-def is_prime(num):
-    """Check if a number is prime."""
-    if num < 2:
-        return False  # 0 and 1 are not prime numbers
+def reverse_words_in_string(s):
     
-    for i in range(2, int(num // 2) + 1):  # Loop up to sqrt(num)
-        if num % i == 0:
-            return False  # If divisible, it's not prime
-    
-    return True  # If no divisors, it's prime
+    words = s.split()  
+    reversed_words = ' '.join(reversed(words))  
+    return reversed_words
 
-# Example usage
-number = int(input("Enter a number: "))
-if is_prime(number):
-    print(f"{number} is a prime number.")
-else:
-    print(f"{number} is not a prime number.")
+# Taking input from the user
+user_input = input("Enter a string: ")
+
+# Reversing the words and displaying the result
+reversed_str = reverse_words_in_string(user_input)
+print("String with reversed words:", reversed_str)
